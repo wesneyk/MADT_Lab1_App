@@ -38,6 +38,8 @@ class MainActivity : AppCompatActivity() {
         // when we click, text becomes red
         ButtonChangeTextColor.setOnClickListener {
             TextViewMain.setTextColor(Color.RED)
+
+            //Code for revert
         }
     }
 }
