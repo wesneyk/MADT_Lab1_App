@@ -1,5 +1,6 @@
 package com.example.helloworldapp
 
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -19,6 +20,14 @@ class MainActivity : AppCompatActivity() {
         // when we click the button, text will change
         ButtonChangeText.setOnClickListener {
             TextViewMain.text = "Button was clicked!"
+        }
+
+        // find the second button
+        val ButtonChangeTextColor = findViewById<Button>(R.id.ButtonChangeTextColor)
+
+        // when we click, text becomes red
+        ButtonChangeTextColor.setOnClickListener {
+            TextViewMain.setTextColor(Color.RED)
         }
     }
 }
