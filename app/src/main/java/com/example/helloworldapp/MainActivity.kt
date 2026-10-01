@@ -1,5 +1,6 @@
 package com.example.helloworldapp
 
+import android.widget.LinearLayout
 import android.graphics.Color
 import android.os.Bundle
 import android.widget.Button
@@ -24,6 +25,15 @@ class MainActivity : AppCompatActivity() {
 
         // find the second button
         val ButtonChangeTextColor = findViewById<Button>(R.id.ButtonChangeTextColor)
+
+        // find the third button and the main layout
+        val ButtonChangeBackground = findViewById<Button>(R.id.ButtonChangeBackground)
+        val LayoutMain = findViewById<LinearLayout>(R.id.main)
+
+        // when we click, background becomes yellow
+        ButtonChangeBackground.setOnClickListener {
+            LayoutMain.setBackgroundColor(Color.YELLOW)
+        }
 
         // when we click, text becomes red
         ButtonChangeTextColor.setOnClickListener {
